@@ -39,6 +39,9 @@
     </div>
   </div>
   <ul class="social-links">
+    {%- if config.extra.social.email -%}
+    <li><a href="mailto:{{ config.extra.social.email }}"><i class="fa fa-envelope"></i></a></li>
+    {%- endif -%}
     {%- if config.extra.social.github -%}
     <li><a href="https://github.com/{{ config.extra.social.github }}"><i class="fab fa-github"></i></a></li>
     {%- endif -%}
@@ -75,8 +78,8 @@
   </ul>
   <div class="footer">
     {% block footer %}
-    <span>Designed by </span><a href="https://www.caicai.me">CaiCai</a>
-    <div class="by_zola"><a href="https://www.getzola.org/" target="_blank">Proudly published with Zola!</a></div>
+    <!-- <span>Designed by </span><a href="https://www.caicai.me">CaiCai</a> -->
+    <!-- <div class="by_zola"><a href="https://www.getzola.org/" target="_blank">Proudly published with Zola!</a></div> -->
     {% endblock footer %}
   </div>
 </div>
@@ -96,7 +99,7 @@
       <div class="back_btn">
         <li><a onclick="window.history.go(-1)" {% if current_path == "/" %}style="display:none;"{% endif %}><i class="fas fa-chevron-left"></i></a></li>
       </div>
-      <div class="avatar"><img src="{{ get_url(path="images/avatar.jpg") }}"></div>
+      <!-- <div class="avatar"><img src="{{ get_url(path="images/avatar.jpg") }}"></div> -->
     </div>
   </div>
   <div class="autopagerize_page_element">
