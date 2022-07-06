@@ -8,13 +8,13 @@
   {% if page.extra.author %}
   <div class="info">By {{ page.extra.author }}.</div>
   {% endif %}
+  {% if page.date %}
+    <i class="far fa-calendar"></i>&nbsp;<span class="date">{{ page.date | date(format=trans(key="date_format")) }}</span>
+  {% endif %}
   <div class="post-content">{{ page.content | safe }}</div>
   <div class="post-footer">
     <div class="meta">
       <div class="info">
-        {% if page.date %}
-          <i class="far fa-sun"></i><span class="date">{{ page.date | date(format=trans(key="date_format")) }}</span>
-        {% endif %}
         {% if page.taxonomies.tags %}
           <i class="fas fa-tags"></i>
           {% for tag in page.taxonomies.tags %}
