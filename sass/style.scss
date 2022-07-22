@@ -863,6 +863,35 @@ html.theme--light {
         border-left: #4a4a4a 0.2em solid;
       }
 
+      // Css based on Bulma Media Object
+      // https://bulma.io/documentation/layout/media-object/
+      .image {
+        display: block;
+        position: relative;
+      }
+      .image.is-64x64 {
+        width: 64px;
+        height: 64px;
+      }
+      aside.aside-note {
+        align-items: flex-start;
+        display: flex;
+        text-align: inherit;
+        
+        .aside-note-left {
+          margin: 0.5rem 1rem;
+          flex-basis: auto;
+          flex-grow: 0;
+          flex-shrink: 0;
+        }
+        .aside-note-content {
+          flex-basis: auto;
+          flex-grow: 1;
+          flex-shrink: 1;
+          text-align: inherit;
+        }
+      }
+
       & code {
         border: 1px solid #E3EDF3;
         background: #f7f7f9;
